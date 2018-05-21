@@ -1,226 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- saved from url=(0035)http://morimorikintaro.web.fc2.com/ -->
-<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
 
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="Content-Script-Type" content="text/javascript">
-<title>彈惈惡桪僜乕僩 30嵨埲壓尷掕ver</title>
+<title>only english</title>
 
 <script type="text/javascript">
 <!--
 //*********************************************************
 //
-// 昡壙偡傞儊儞僶乕偺柤慜偺儕僗僩
+// 評価するメンバーの名前のリスト
 //
-// 偙偺晹暘傪曄峏偟偰壓偝偄丅柤慜偺嶍彍丒捛壛傕壜擻偱偡丅
-// 柤慜傪堷梡晞(")偱妵傝丄僐儞儅(,)偱嬫愗偭偰壓偝偄丅
-// 扐偟丄儕僗僩偺嵟屻偵偼僐儞儅傪擖傟偰偼偄偗傑偣傫丅
+// この部分を変更して下さい。名前の削除?追加も可能です。
+// 名前を引用符(")で括り、コンマ(,)で区切って下さい。
+// 但し、リストの最後にはコンマを入れてはいけません。
 //
 //*********************************************************
 var namMember = new Array(
-"憗尒嵐怐",
-"桰栘暽",
-"崅揷桱婓",
-"杮搉晼",
-"愮杮栘嵤壴",
-"壴郪崄嵷",
-"庬揷棞嵐",
-"愒愮壞",
-"柧嶁憦旤",
-"峳愳旤曚",
-"堜郪帊怐",
-"崱堜杻壞",
-"撪嶳梉幚",
-"戝娭塸棦",
-"戝婽偁偡偐",
-"嬥尦庻巕",
-"姖栰垽堖",
-"婌懡懞塸棞",
-"扚桰堖巕",
-"揷懞杛怱",
-"惣柧擔崄",
-"暯栰埢",
-"熀忋晳",
-"嶳岥棫壴巕",
-"屆栘偺偧傒",
-"嶳懞嬁",
-"尨揷傂偲傒",
-"峳楺榓嵐",
-"堜岥桾崄",
-"愇忋惷崄",
-"埳悾錆浠栫",
-"戝嬻捈旤",
-"壛孏垷堖",
-"擁揷垷堖撧",
-"彫徏枹壜巕",
-"恴朘嵤壴",
-"挿嵢庽棦",
-"徖憅垽旤",
-"擻搊桳嵐",
-"Pile",
-"恅嵅榓巕",
-"尨幯桭棦",
-"尨撧捗巕",
-"僽儕僪僇僢僩僙乕儔宐旤",
-"徏堜宐棟巕",
-"嶰忋巬怐",
-"嶳杮婓朷",
-"搉晹桪堖",
-"惵栘椱棡巕",
-"愇愳桼埶",
-"撪揷恀楃",
-"戝媣曐椱旤",
-"旜崅傕偊傒",
-"彫尒愳愮柧",
-"媣曐儐儕僇",
-"彫娾堜偙偲傝",
-"抾払嵤撧",
-"揷拞恀撧旤",
-"捗揷旤攇",
-"摽堜惵嬻",
-"屗徏梱",
-"拞搰垽",
-"挿搰岝撨",
-"郚傔偖傒",
-"暉尨埢崄",
-"慜揷楁撧",
-"媨杮壚撨巕",
-"埨栰婓悽擳",
-"憡嶁桪壧",
-"埨嵪抦壚",
-"墱栰崄栯",
-"彫栰憗婬",
-"嵅乆栘枹棃",
-"嵅摗垷旤嵷",
-"僞僇僆儐僉",
-"崅嫶枹撧旤",
-"搶忛擔嵐巕",
-"屗揷傔偖傒",
-"垽旤",
-"嶳杒憗婭",
-"斞揷棦曚",
-"忋嶁偡傒傟",
-"孠尨桼婥",
-"庻旤嵷巕",
-"嬵宍桭棞",
-"愮悰弔崄",
-"拠扟柧崄",
-"搶嶳撧墰",
-"M丒A丒O",
-"Machico",
-"嶳嶈偼傞偐",
-"挬堜嵤壛",
-"戝惣嵐怐",
-"彫郪垷棝",
-"妏尦柧擔崄",
-"嬥郪傑偄",
-"媣栰旤嶇",
-"彫尨岲旤",
-"楅栘奊棟",
-"揷拞偁偄傒",
-"塱栰垽棟",
-"嫶杮偪側傒",
-"尨桪巕",
-"摗揷埄",
-"嶰郪幯愮崄",
-"媑揷桳棦",
-"嶳揷桰婓",
-"挬擔撧娵壚",
-"塉媨揤",
-"愇揷惏崄",
-"愇尨壞怐",
-"堫愳塸棦",
-"崱懞嵤壞",
-"忋揷楉撧",
-"戝捸桼壚",
-"戝栰桵晍巕",
-"旜嶈桼崄",
-"塭嶳摂",
-"杒尨嵐栱崄",
-"彫巗崃嬚",
-"杒愳棦撧",
-"堖愳棦壚",
-"彫椦垽崄",
-"彫媨桳幯",
-"嵅憅埢壒",
-"郌扟埐婓",
-"壓抧巼栰",
-"悾屗杻嵐旤",
-"崅捨偐側偙",
-"崅栰杻棦壚",
-"崅嫶棝埶",
-"揷強偁偢偝",
-"拞栰偝偄傑",
-"弔栰側側傒",
-"峀悾備偆偒",
-"崀敠垽",
-"徏揷镈悈",
-"徏揷棙嶀",
-"埄壆擔奀壞",
-"杻憅傕傕",
-"堜郪旤崄巕",
-"釫晹壴辏",
-"塅嶳楁壛",
-"墦摗備傝偐",
-"戝嫶嵤崄",
-"戝怷擔夒",
-"媣曐揷枹柌",
-"幝揷傒側傒",
-"恴朘側側偐",
-"嬟郪桪",
-"崅嫶壴椦",
-"朙揷朑奊",
-"幍悾嵤壞",
-"惣杮傝傒",
-"弔悾側偮傒",
-"擔崅棦嵷",
-"暉弿桞",
-"摗尨壞奀",
-"杧栰幯栫壛",
-"榓焼偁偢枹",
-"榓媣堜桪",
-"埳攇埱庽",
-"戝捤幯塸",
-"彫憅桞",
-"敀愇惏崄",
-"揷拞旤奀",
-"廐撧",
-"挿撽傑傝偁",
-"怺愳嬟垷",
-"悈悾偄偺傝",
-"嶳壓幍奀",
-"媑壀錆桽",
-"懞忋撧捗幚",
-"庒堜桭婓",
-"榓揷嫗巕",
-"憡撪嵐塸",
-"埳摗嵤嵐",
-"埳摗旤棃",
-"惵嶳媑擻",
-"栘栰擔嵷",
-"惸摗庨壞",
-"崟戲偲傕傛",
-"崅栘旤桟",
-"壞愳捙嵷",
-"旤嶳壛楒",
-"堜忋傎偺壴",
-"栘屗堖悂",
-"楅栘傒偺傝",
-"揷曈棷埶",
-"拞搰桼婱",
-"怴揷傂傛傝",
-"崻杮棳晽",
-"尨揷嵤晼",
-"壴庣備傒傝",
-"嶳岥垽",
-"嶳嶈僄儕僀",
-"暉尨梱",
-"嬤摗楁撧",
-"彅惎偡傒傟",
-"晉揷旤桱",
-"崅旜憈壒",
-"懞拞抦",
-"埳払庨棦幯"
+"Kokoro",
+"TKD"
 );
 //*********************************************************
 
@@ -237,13 +34,13 @@ var totalSize;
 var finishSize;
 var finishFlag;
 
-//曄悢偺弶婜壔+++++++++++++++++++++++++++++++++++++++++++++
+//変数の初期化+++++++++++++++++++++++++++++++++++++++++++++
 function initList(){
 	var n = 0;
 	var mid;
 	var i;
 
-	//僜乕僩偡傋偒攝楍
+	//ソートすべき配列
 	lstMember[n] = new Array();
 	for (i=0; i<namMember.length; i++) {
 		lstMember[n][i] = i;
@@ -253,8 +50,8 @@ function initList(){
 	n++;
 
 	for (i=0; i<lstMember.length; i++) {
-		//梫慺悢偑俀埲忋側傜俀暘妱偟丄
-		//暘妱偝傟偨攝楍傪lstMember偺嵟屻偵壛偊傞
+		//要素数が２以上なら２分割し、
+		//分割された配列をlstMemberの最後に加える
 		if(lstMember[i].length>=2) {
 			mid = Math.ceil(lstMember[i].length/2);
 			lstMember[n] = new Array();
@@ -270,15 +67,15 @@ function initList(){
 		}
 	}
 
-	//曐懚梡攝楍
+	//保存用配列
 	for (i=0; i<namMember.length; i++) {
 		rec[i] = 0;
 	}
 	nrec = 0;
 
-	//堷偒暘偗偺寢壥傪曐懚偡傞儕僗僩
-	//僉乕丗儕儞僋巒揰偺抣
-	// 抣 丗儕儞僋廔揰偺抣
+	//引き分けの結果を保存するリスト
+	//キー：リンク始点の値
+	// 値 ：リンク終点の値
 	for (i=0; i<=namMember.length; i++) {
 		equal[i] = -1;
 	}
@@ -292,16 +89,16 @@ function initList(){
 	finishFlag = 0;
 }
 
-//儕僗僩偺僜乕僩+++++++++++++++++++++++++++++++++++++++++++
-//flag丗斾妑寢壥
-//  -1丗嵍傪慖戰
-//   0丗堷偒暘偗
-//   1丗塃傪慖戰
+//リストのソート+++++++++++++++++++++++++++++++++++++++++++
+//flag：比較結果
+//  -1：左を選択
+//   0：引き分け
+//   1：右を選択
 function sortList(flag){
 	var i;
 	var str;
 
-	//rec偵曐懚
+	//recに保存
 	if (flag<0) {
 		rec[nrec] = lstMember[cmp1][head1];
 		head1++;
@@ -350,9 +147,9 @@ function sortList(flag){
 		}
 	}
 
-	//曅曽偺儕僗僩傪憱嵏偟廔偊偨屻偺張棟
+	//片方のリストを走査し終えた後の処理
 	if (head1<lstMember[cmp1].length && head2==lstMember[cmp2].length) {
-		//儕僗僩cmp2偑憱嵏嵪 - 儕僗僩cmp1偺巆傝傪僐僺乕
+		//リストcmp2が走査済 - リストcmp1の残りをコピー
 		while (head1<lstMember[cmp1].length){
 			rec[nrec] = lstMember[cmp1][head1];
 			head1++;
@@ -361,7 +158,7 @@ function sortList(flag){
 		}
 	}
 	else if (head1==lstMember[cmp1].length && head2<lstMember[cmp2].length) {
-		//儕僗僩cmp1偑憱嵏嵪 - 儕僗僩cmp2偺巆傝傪僐僺乕
+		//リストcmp1が走査済 - リストcmp2の残りをコピー
 		while (head2<lstMember[cmp2].length){
 			rec[nrec] = lstMember[cmp2][head2];
 			head2++;
@@ -370,8 +167,8 @@ function sortList(flag){
 		}
 	}
 
-	//椉曽偺儕僗僩偺嵟屻偵摓払偟偨応崌偼
-	//恊儕僗僩傪峏怴偡傞
+	//両方のリストの最後に到達した場合は
+	//親リストを更新する
 	if (head1==lstMember[cmp1].length && head2==lstMember[cmp2].length) {
 		for (i=0; i<lstMember[cmp1].length+lstMember[cmp2].length; i++) {
 			lstMember[parent[cmp1]][i] = rec[i];
@@ -383,7 +180,7 @@ function sortList(flag){
 		head1 = 0;
 		head2 = 0;
 
-		//怴偟偄斾妑傪峴偆慜偵rec傪弶婜壔
+		//新しい比較を行う前にrecを初期化
 		if (head1==0 && head2==0) {
 			for (i=0; i<namMember.length; i++) {
 				rec[i] = 0;
@@ -404,7 +201,7 @@ function sortList(flag){
 	}
 }
 
-//寢壥偺昞帵+++++++++++++++++++++++++++++++++++++++++++++++
+//結果の表示+++++++++++++++++++++++++++++++++++++++++++++++
 function showResult() {
 	var ranking = 1;
 	var sameRank = 1;
@@ -412,7 +209,7 @@ function showResult() {
 	var i;
 
 	str += "<table style=\"width:200px; font-size:12px; line-height:120%; margin-left:auto; margin-right:auto; border:1px solid #000; border-collapse:collapse\" align=\"center\">";
-	str += "<tr><td style=\"color:#ffffff; background-color:#000; text-align:center;\">弴埵<\/td><td style=\"color:#ffffff; background-color:#000; text-align:center;\">柤慜<\/td><\/tr>";
+	str += "<tr><td style=\"color:#ffffff; background-color:#000; text-align:center;\">Order<\/td><td style=\"color:#ffffff; background-color:#000; text-align:center;\">Name<\/td><\/tr>";
 
 	for (i=0; i<namMember.length; i++) {
 		str += "<tr><td style=\"border:1px solid #000; text-align:right; padding-right:5px;\">"+ranking+"<\/td><td style=\"border:1px solid #000; padding-left:5px;\">"+namMember[lstMember[0][i]]+"<\/td><\/tr>";
@@ -430,7 +227,7 @@ function showResult() {
 	document.getElementById("resultField").innerHTML = str;
 }
 
-//斾妑偡傞俀偮梫慺偺昞帵+++++++++++++++++++++++++++++++++++
+//比較する２つ要素の表示+++++++++++++++++++++++++++++++++++
 function showImage() {
 	var str0 = "Battle No."+numQuestion+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
 	var str1 = ""+toNameFace(lstMember[cmp1][head1]);
@@ -443,17 +240,17 @@ function showImage() {
 	numQuestion++;
 }
 
-//悢抣傪柤慜乮婄暥帤乯偵曄姺+++++++++++++++++++++++++++++++
+//数値を名前（顔文字）に変換+++++++++++++++++++++++++++++++
 function toNameFace(n){
 	var str = namMember[n];
 
-	//婄暥帤傪捛壛偡傞応崌偼埲壓偺僐儊儞僩傾僂僩傪奜偡
-	//namMember偺僀儞僨僢僋僗偲柕弬偟側偄傛偆偵拲堄
+	//顔文字を追加する場合は以下のコメントアウトを外す
+	//namMemberのインデックスと矛盾しないように注意
 	/*
-	str += "<br>劅劅劅劅<br>";
+	str += "<br>────<br>";
 	switch(n) {
-		//case -1 偼僒儞僾儖側偺偱嶍彍偡傞偙偲
-		case -1: str+="乮 丩佂丮乯";break;
+		//case -1 はサンプルなので削除すること
+		case -1: str+="（ ′?｀）";break;
 		default: str+=""+n;
 	}
 	*/
@@ -465,7 +262,7 @@ function toNameFace(n){
 <!--
 /**********************************************************
 
- 昞偺僗僞僀儖傪曄峏偡傞応崌偼偙偙傪曇廤偟偰偔偩偝偄丅
+ 表のスタイルを変更する場合はここを編集してください。
 
 **********************************************************/
 #mainTable{
@@ -504,22 +301,21 @@ function toNameFace(n){
 		<td id="battleNumber" colspan="3" style="padding-bottom: 10px;">Battle No.3<br>0% sorted.</td>
 	</tr>
 	<tr>
-		<td id="leftField" onclick="if(finishFlag==0)sortList(-1);" rowspan="2">嶳岥垽</td>
+		<td id="leftField" onclick="if(finishFlag==0)sortList(-1);" rowspan="2">L</td>
 		<td class="middleField" onclick="if(finishFlag==0)sortList(0);">
-			堷偒暘偗
+			Tie
 		</td>
-		<td id="rightField" onclick="if(finishFlag==0)sortList(1);" rowspan="2">嶳嶈僄儕僀</td>
+		<td id="rightField" onclick="if(finishFlag==0)sortList(1);" rowspan="2">R</td>
 	</tr>
 	<tr>
 		<td class="middleField" onclick="if(finishFlag==0)sortList(0);">
-			偳偪傜傕偟傜側偄
+			Idk them
 		</td>
 	</tr>
 </tbody></table><br><br>
 <div id="resultField" style="text-align:center;">
-<div style="text-align: center;">俉俈擭埲崀偵惗傑傟偨彈惈惡桪傪傪岲偒側弴偵僜乕僩偟傑偡丅</div>
-<div id="resultField" style="text-align: center;">岲偒側曽乮傑偨偼堷偒暘偗乯傪僋儕僢僋偱慖戰偟偰偔偩偝偄丅 <br><br> 偙偪傜偺儁乕僕傊偺儕儞僋偼僼儕乕偱偡丅 <br>側偍丄惡桪偛杮恖丄強懏帠柋強摍偲偺娭學偼偛偞偄傑偣傫丅
-</div>
+<div style="text-align: center;">only English</div>
+<div id="resultField" style="text-align: center;">only English<br><br>only English<br>only English</div>
 </div>
 <script type="text/javascript"><!--
 	initList();
