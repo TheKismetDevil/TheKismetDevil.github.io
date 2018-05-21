@@ -1,0 +1,530 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0035)http://morimorikintaro.web.fc2.com/ -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>女性声優ソート 30歳以下限定ver</title>
+
+<script type="text/javascript">
+<!--
+//*********************************************************
+//
+// 評価するメンバーの名前のリスト
+//
+// この部分を変更して下さい。名前の削除・追加も可能です。
+// 名前を引用符(")で括り、コンマ(,)で区切って下さい。
+// 但し、リストの最後にはコンマを入れてはいけません。
+//
+//*********************************************************
+var namMember = new Array(
+"早見沙織",
+"悠木碧",
+"高田憂希",
+"本渡楓",
+"千本木彩花",
+"花澤香菜",
+"種田梨沙",
+"赤﨑千夏",
+"明坂聡美",
+"荒川美穂",
+"井澤詩織",
+"今井麻夏",
+"内山夕実",
+"大関英里",
+"大亀あすか",
+"金元寿子",
+"茅野愛衣",
+"喜多村英梨",
+"巽悠衣子",
+"田村睦心",
+"西明日香",
+"平野綾",
+"渕上舞",
+"山口立花子",
+"古木のぞみ",
+"山村響",
+"原田ひとみ",
+"荒浪和沙",
+"井口裕香",
+"石上静香",
+"伊瀬茉莉也",
+"大空直美",
+"加隈亜衣",
+"楠田亜衣奈",
+"小松未可子",
+"諏訪彩花",
+"長妻樹里",
+"沼倉愛美",
+"能登有沙",
+"Pile",
+"秦佐和子",
+"原紗友里",
+"原奈津子",
+"ブリドカットセーラ恵美",
+"松井恵理子",
+"三上枝織",
+"山本希望",
+"渡部優衣",
+"青木瑠璃子",
+"石川由依",
+"内田真礼",
+"大久保瑠美",
+"尾高もえみ",
+"小見川千明",
+"久保ユリカ",
+"小岩井ことり",
+"竹達彩奈",
+"田中真奈美",
+"津田美波",
+"徳井青空",
+"戸松遥",
+"中島愛",
+"長島光那",
+"潘めぐみ",
+"福原綾香",
+"前田玲奈",
+"宮本佳那子",
+"安野希世乃",
+"相坂優歌",
+"安済知佳",
+"奥野香耶",
+"小野早稀",
+"佐々木未来",
+"佐藤亜美菜",
+"タカオユキ",
+"高橋未奈美",
+"東城日沙子",
+"戸田めぐみ",
+"愛美",
+"山北早紀",
+"飯田里穂",
+"上坂すみれ",
+"桑原由気",
+"寿美菜子",
+"駒形友梨",
+"千菅春香",
+"仲谷明香",
+"東山奈央",
+"M・A・O",
+"Machico",
+"山崎はるか",
+"朝井彩加",
+"大西沙織",
+"小澤亜李",
+"角元明日香",
+"金澤まい",
+"久野美咲",
+"小原好美",
+"鈴木絵理",
+"田中あいみ",
+"永野愛理",
+"橋本ちなみ",
+"原優子",
+"藤田茜",
+"三澤紗千香",
+"吉田有里",
+"山田悠希",
+"朝日奈丸佳",
+"雨宮天",
+"石田晴香",
+"石原夏織",
+"稲川英里",
+"今村彩夏",
+"上田麗奈",
+"大坪由佳",
+"大野柚布子",
+"尾崎由香",
+"影山灯",
+"北原沙弥香",
+"小市眞琴",
+"北川里奈",
+"衣川里佳",
+"小林愛香",
+"小宮有紗",
+"佐倉綾音",
+"澁谷梓希",
+"下地紫野",
+"瀬戸麻沙美",
+"高槻かなこ",
+"高野麻里佳",
+"高橋李依",
+"田所あずさ",
+"中野さいま",
+"春野ななみ",
+"広瀬ゆうき",
+"降幡愛",
+"松田颯水",
+"松田利冴",
+"茜屋日海夏",
+"麻倉もも",
+"井澤美香子",
+"礒部花凜",
+"宇山玲加",
+"遠藤ゆりか",
+"大橋彩香",
+"大森日雅",
+"久保田未夢",
+"篠田みなみ",
+"諏訪ななか",
+"芹澤優",
+"高橋花林",
+"豊田萌絵",
+"七瀬彩夏",
+"西本りみ",
+"春瀬なつみ",
+"日高里菜",
+"福緒唯",
+"藤原夏海",
+"堀野紗也加",
+"和氣あず未",
+"和久井優",
+"伊波杏樹",
+"大塚紗英",
+"小倉唯",
+"白石晴香",
+"田中美海",
+"秋奈",
+"長縄まりあ",
+"深川芹亜",
+"水瀬いのり",
+"山下七海",
+"吉岡茉祐",
+"村上奈津実",
+"若井友希",
+"和田京子",
+"相内沙英",
+"伊藤彩沙",
+"伊藤美来",
+"青山吉能",
+"木野日菜",
+"斉藤朱夏",
+"黒沢ともよ",
+"高木美佑",
+"夏川椎菜",
+"美山加恋",
+"井上ほの花",
+"木戸衣吹",
+"鈴木みのり",
+"田辺留依",
+"中島由貴",
+"新田ひより",
+"根本流風",
+"原田彩楓",
+"花守ゆみり",
+"山口愛",
+"山崎エリイ",
+"福原遥",
+"近藤玲奈",
+"諸星すみれ",
+"富田美憂",
+"高尾奏音",
+"村中知",
+"伊達朱里紗"
+);
+//*********************************************************
+
+var lstMember = new Array();
+var parent = new Array();
+var equal = new Array();
+var rec = new Array();
+var cmp1,cmp2;
+var head1,head2;
+var nrec;
+
+var numQuestion;
+var totalSize;
+var finishSize;
+var finishFlag;
+
+//変数の初期化+++++++++++++++++++++++++++++++++++++++++++++
+function initList(){
+	var n = 0;
+	var mid;
+	var i;
+
+	//ソートすべき配列
+	lstMember[n] = new Array();
+	for (i=0; i<namMember.length; i++) {
+		lstMember[n][i] = i;
+	}
+	parent[n] = -1;
+	totalSize = 0;
+	n++;
+
+	for (i=0; i<lstMember.length; i++) {
+		//要素数が２以上なら２分割し、
+		//分割された配列をlstMemberの最後に加える
+		if(lstMember[i].length>=2) {
+			mid = Math.ceil(lstMember[i].length/2);
+			lstMember[n] = new Array();
+			lstMember[n] = lstMember[i].slice(0,mid);
+			totalSize += lstMember[n].length;
+			parent[n] = i;
+			n++;
+			lstMember[n] = new Array();
+			lstMember[n] = lstMember[i].slice(mid,lstMember[i].length);
+			totalSize += lstMember[n].length;
+			parent[n] = i;
+			n++;
+		}
+	}
+
+	//保存用配列
+	for (i=0; i<namMember.length; i++) {
+		rec[i] = 0;
+	}
+	nrec = 0;
+
+	//引き分けの結果を保存するリスト
+	//キー：リンク始点の値
+	// 値 ：リンク終点の値
+	for (i=0; i<=namMember.length; i++) {
+		equal[i] = -1;
+	}
+
+	cmp1 = lstMember.length-2;
+	cmp2 = lstMember.length-1;
+	head1 = 0;
+	head2 = 0;
+	numQuestion = 1;
+	finishSize = 0;
+	finishFlag = 0;
+}
+
+//リストのソート+++++++++++++++++++++++++++++++++++++++++++
+//flag：比較結果
+//  -1：左を選択
+//   0：引き分け
+//   1：右を選択
+function sortList(flag){
+	var i;
+	var str;
+
+	//recに保存
+	if (flag<0) {
+		rec[nrec] = lstMember[cmp1][head1];
+		head1++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp1][head1];
+			head1++;
+			nrec++;
+			finishSize++;
+		}
+	}
+	else if (flag>0) {
+		rec[nrec] = lstMember[cmp2][head2];
+		head2++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp2][head2];
+			head2++;
+			nrec++;
+			finishSize++;
+		}
+	}
+	else {
+		rec[nrec] = lstMember[cmp1][head1];
+		head1++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp1][head1];
+			head1++;
+			nrec++;
+			finishSize++;
+		}
+		equal[rec[nrec-1]] = lstMember[cmp2][head2];
+		rec[nrec] = lstMember[cmp2][head2];
+		head2++;
+		nrec++;
+		finishSize++;
+		while (equal[rec[nrec-1]]!=-1) {
+			rec[nrec] = lstMember[cmp2][head2];
+			head2++;
+			nrec++;
+			finishSize++;
+		}
+	}
+
+	//片方のリストを走査し終えた後の処理
+	if (head1<lstMember[cmp1].length && head2==lstMember[cmp2].length) {
+		//リストcmp2が走査済 - リストcmp1の残りをコピー
+		while (head1<lstMember[cmp1].length){
+			rec[nrec] = lstMember[cmp1][head1];
+			head1++;
+			nrec++;
+			finishSize++;
+		}
+	}
+	else if (head1==lstMember[cmp1].length && head2<lstMember[cmp2].length) {
+		//リストcmp1が走査済 - リストcmp2の残りをコピー
+		while (head2<lstMember[cmp2].length){
+			rec[nrec] = lstMember[cmp2][head2];
+			head2++;
+			nrec++;
+			finishSize++;
+		}
+	}
+
+	//両方のリストの最後に到達した場合は
+	//親リストを更新する
+	if (head1==lstMember[cmp1].length && head2==lstMember[cmp2].length) {
+		for (i=0; i<lstMember[cmp1].length+lstMember[cmp2].length; i++) {
+			lstMember[parent[cmp1]][i] = rec[i];
+		}
+		lstMember.pop();
+		lstMember.pop();
+		cmp1 = cmp1-2;
+		cmp2 = cmp2-2;
+		head1 = 0;
+		head2 = 0;
+
+		//新しい比較を行う前にrecを初期化
+		if (head1==0 && head2==0) {
+			for (i=0; i<namMember.length; i++) {
+				rec[i] = 0;
+			}
+			nrec = 0;
+		}
+	}
+
+	if (cmp1<0) {
+		str = "Battle No."+(numQuestion-1)+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
+		document.getElementById("battleNumber").innerHTML = str;
+
+		showResult();
+		finishFlag = 1;
+	}
+	else {
+		showImage();
+	}
+}
+
+//結果の表示+++++++++++++++++++++++++++++++++++++++++++++++
+function showResult() {
+	var ranking = 1;
+	var sameRank = 1;
+	var str = "";
+	var i;
+
+	str += "<table style=\"width:200px; font-size:12px; line-height:120%; margin-left:auto; margin-right:auto; border:1px solid #000; border-collapse:collapse\" align=\"center\">";
+	str += "<tr><td style=\"color:#ffffff; background-color:#000; text-align:center;\">順位<\/td><td style=\"color:#ffffff; background-color:#000; text-align:center;\">名前<\/td><\/tr>";
+
+	for (i=0; i<namMember.length; i++) {
+		str += "<tr><td style=\"border:1px solid #000; text-align:right; padding-right:5px;\">"+ranking+"<\/td><td style=\"border:1px solid #000; padding-left:5px;\">"+namMember[lstMember[0][i]]+"<\/td><\/tr>";
+		if (i<namMember.length-1) {
+			if (equal[lstMember[0][i]]==lstMember[0][i+1]) {
+				sameRank++;
+			} else {
+				ranking += sameRank;
+				sameRank = 1;
+			}
+		}
+	}
+	str += "<\/table>";
+
+	document.getElementById("resultField").innerHTML = str;
+}
+
+//比較する２つ要素の表示+++++++++++++++++++++++++++++++++++
+function showImage() {
+	var str0 = "Battle No."+numQuestion+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
+	var str1 = ""+toNameFace(lstMember[cmp1][head1]);
+	var str2 = ""+toNameFace(lstMember[cmp2][head2]);
+
+	document.getElementById("battleNumber").innerHTML = str0;
+	document.getElementById("leftField").innerHTML = str1;
+	document.getElementById("rightField").innerHTML = str2;
+
+	numQuestion++;
+}
+
+//数値を名前（顔文字）に変換+++++++++++++++++++++++++++++++
+function toNameFace(n){
+	var str = namMember[n];
+
+	//顔文字を追加する場合は以下のコメントアウトを外す
+	//namMemberのインデックスと矛盾しないように注意
+	/*
+	str += "<br>────<br>";
+	switch(n) {
+		//case -1 はサンプルなので削除すること
+		case -1: str+="（ ´∀｀）";break;
+		default: str+=""+n;
+	}
+	*/
+	return str;
+}
+//-->
+</script>
+<style type="text/css">
+<!--
+/**********************************************************
+
+ 表のスタイルを変更する場合はここを編集してください。
+
+**********************************************************/
+#mainTable{
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	width: 410px;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: separate;
+	border-spacing: 10px 5px;
+}
+#leftField{
+	width: 120px;
+	height: 150px;
+	border: 1px solid #000;
+}
+#rightField{
+	width: 120px;
+	height: 150px;
+	border: 1px solid #000;
+}
+.middleField{
+	width: 120px;
+	height: 70px;
+	border: 1px solid #000;
+}
+//-->
+</style>
+</head>
+
+
+<body style="">
+<table id="mainTable" align="center">
+	<tbody><tr>
+		<td id="battleNumber" colspan="3" style="padding-bottom: 10px;">Battle No.3<br>0% sorted.</td>
+	</tr>
+	<tr>
+		<td id="leftField" onclick="if(finishFlag==0)sortList(-1);" rowspan="2">山口愛</td>
+		<td class="middleField" onclick="if(finishFlag==0)sortList(0);">
+			引き分け
+		</td>
+		<td id="rightField" onclick="if(finishFlag==0)sortList(1);" rowspan="2">山崎エリイ</td>
+	</tr>
+	<tr>
+		<td class="middleField" onclick="if(finishFlag==0)sortList(0);">
+			どちらもしらない
+		</td>
+	</tr>
+</tbody></table><br><br>
+<div id="resultField" style="text-align:center;">
+<div style="text-align: center;">８７年以降に生まれた女性声優をを好きな順にソートします。</div>
+<div id="resultField" style="text-align: center;">好きな方（または引き分け）をクリックで選択してください。 <br><br> こちらのページへのリンクはフリーです。 <br>なお、声優ご本人、所属事務所等との関係はございません。
+</div>
+</div>
+<script type="text/javascript"><!--
+	initList();
+	showImage();
+//-->
+</script>
+
+</body></html>

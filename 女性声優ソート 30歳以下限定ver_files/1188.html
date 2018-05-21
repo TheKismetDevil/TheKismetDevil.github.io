@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://assys01.fc2.com/1188 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+<style type="text/css">
+	* {
+		padding:0;
+		margin:0;
+	}
+	#as-sys {
+		width:100%;
+	}
+</style></head>
+
+<body>
+	<div id="as-sys" data-z="1188" data-c="11" data-t="223"><script type="text/javascript">
+var microadCompass = microadCompass || {};
+microadCompass.queue = microadCompass.queue || [];
+</script>
+<script type="text/javascript" charset="UTF-8" src="./compass.js.下载" onload="new microadCompass.AdInitializer().initialize();" async=""></script>
+<div id="793761e06e731a9b432e33760ab1c55d">
+ <script type="text/javascript">
+  microadCompass.queue.push({
+   "spot": "793761e06e731a9b432e33760ab1c55d",
+   "url": "${COMPASS_EXT_URL}",
+   "referrer": "${COMPASS_EXT_REF}"
+  });
+ </script>
+</div></div>
+	<script src="./ajax.module.js.下载"></script><iframe width="1" height="1" style="position:absolute; top:-9999px; left: -9999px; border-style: none" src="./cookie_loader.html"></iframe><iframe width="1" height="1" style="position:absolute; top:-9999px; left: -9999px; border-style: none" src="./cookie_enabled_get.html"></iframe>
+	<script type="text/javascript">
+	(function(){
+		var doc = document;
+		var ready = setInterval(function(){
+
+			if(doc.readyState === "complete") {
+				clearInterval(ready);
+				var el = doc.getElementById('as-sys');
+				AjaxReq.request({
+					url:"./",
+					method:"POST",
+					data:{
+						"zoneid":el.getAttribute("data-z"),
+						"clientid":el.getAttribute("data-c"),
+						"tagid":el.getAttribute("data-t")
+					}
+				}).success(function(res){
+
+				}).failed(function(res){
+
+				});
+				var assysConf = {
+					iframeMouseOver : false
+				};
+				window.addEventListener('blur',function(){
+					if(assysConf.iframeMouseOver){
+						AjaxReq.request({
+							url:"./",
+							method:"POST",
+							data:{
+								"zoneid":el.getAttribute("data-z"),
+								"clientid":el.getAttribute("data-c"),
+								"tagid":el.getAttribute("data-t"),
+								"isclick_nw":true
+							}
+						}).success(function(res){
+
+						}).failed(function(res){
+
+						});
+					}
+				});
+
+				var iframes = document.getElementsByTagName("iframe");
+				for (var i = 0; i < iframes.length; i++) {
+					iframes[i].addEventListener('mouseover', function () {
+						assysConf.iframeMouseOver = true;
+						window.focus();
+					});
+					iframes[i].addEventListener('mouseout', function () {
+						assysConf.iframeMouseOver = false;
+					});
+				}
+
+			}
+		},100);
+	})();
+	</script>
+
+</body></html>
