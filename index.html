@@ -6,20 +6,10 @@
 
 <script type="text/javascript">
 <!--
-//*********************************************************
-//
-// Ôuı¤¹¤ë¥á¥ó¥Ğ©`¤ÎÃûÇ°¤Î¥ê¥¹¥È
-//
-// ¤³¤Î²¿·Ö¤ò‰ä¸ü¤·¤ÆÏÂ¤µ¤¤¡£ÃûÇ°¤ÎÏ÷³ı?×·¼Ó¤â¿ÉÄÜ¤Ç¤¹¡£
-// ÃûÇ°¤òÒıÓÃ·û(")¤ÇÀ¨¤ê¡¢¥³¥ó¥Ş(,)¤ÇÇøÇĞ¤Ã¤ÆÏÂ¤µ¤¤¡£
-// µ«¤·¡¢¥ê¥¹¥È¤Î×îáá¤Ë¤Ï¥³¥ó¥Ş¤òÈë¤ì¤Æ¤Ï¤¤¤±¤Ş¤»¤ó¡£
-//
-//*********************************************************
 var namMember = new Array(
 "Kokoro",
 "TKD"
 );
-//*********************************************************
 
 var lstMember = new Array();
 var parent = new Array();
@@ -34,13 +24,11 @@ var totalSize;
 var finishSize;
 var finishFlag;
 
-//‰äÊı¤Î³õÆÚ»¯+++++++++++++++++++++++++++++++++++++++++++++
 function initList(){
 	var n = 0;
 	var mid;
 	var i;
 
-	//¥½©`¥È¤¹¤Ù¤­ÅäÁĞ
 	lstMember[n] = new Array();
 	for (i=0; i<namMember.length; i++) {
 		lstMember[n][i] = i;
@@ -50,8 +38,6 @@ function initList(){
 	n++;
 
 	for (i=0; i<lstMember.length; i++) {
-		//ÒªËØÊı¤¬£²ÒÔÉÏ¤Ê¤é£²·Ö¸î¤·¡¢
-		//·Ö¸î¤µ¤ì¤¿ÅäÁĞ¤òlstMember¤Î×îáá¤Ë¼Ó¤¨¤ë
 		if(lstMember[i].length>=2) {
 			mid = Math.ceil(lstMember[i].length/2);
 			lstMember[n] = new Array();
@@ -67,15 +53,11 @@ function initList(){
 		}
 	}
 
-	//±£´æÓÃÅäÁĞ
 	for (i=0; i<namMember.length; i++) {
 		rec[i] = 0;
 	}
 	nrec = 0;
 
-	//Òı¤­·Ö¤±¤Î½Y¹û¤ò±£´æ¤¹¤ë¥ê¥¹¥È
-	//¥­©`£º¥ê¥ó¥¯Ê¼µã¤Î‚
-	// ‚ £º¥ê¥ó¥¯½Kµã¤Î‚
 	for (i=0; i<=namMember.length; i++) {
 		equal[i] = -1;
 	}
@@ -89,16 +71,10 @@ function initList(){
 	finishFlag = 0;
 }
 
-//¥ê¥¹¥È¤Î¥½©`¥È+++++++++++++++++++++++++++++++++++++++++++
-//flag£º±Èİ^½Y¹û
-//  -1£º×ó¤òßx’k
-//   0£ºÒı¤­·Ö¤±
-//   1£ºÓÒ¤òßx’k
 function sortList(flag){
 	var i;
 	var str;
 
-	//rec¤Ë±£´æ
 	if (flag<0) {
 		rec[nrec] = lstMember[cmp1][head1];
 		head1++;
@@ -147,9 +123,7 @@ function sortList(flag){
 		}
 	}
 
-	//Æ¬·½¤Î¥ê¥¹¥È¤ò×ß–Ë¤·½K¤¨¤¿áá¤Î„IÀí
 	if (head1<lstMember[cmp1].length && head2==lstMember[cmp2].length) {
-		//¥ê¥¹¥Ècmp2¤¬×ß–Ëœg - ¥ê¥¹¥Ècmp1¤Î²Ğ¤ê¤ò¥³¥Ô©`
 		while (head1<lstMember[cmp1].length){
 			rec[nrec] = lstMember[cmp1][head1];
 			head1++;
@@ -158,7 +132,6 @@ function sortList(flag){
 		}
 	}
 	else if (head1==lstMember[cmp1].length && head2<lstMember[cmp2].length) {
-		//¥ê¥¹¥Ècmp1¤¬×ß–Ëœg - ¥ê¥¹¥Ècmp2¤Î²Ğ¤ê¤ò¥³¥Ô©`
 		while (head2<lstMember[cmp2].length){
 			rec[nrec] = lstMember[cmp2][head2];
 			head2++;
@@ -167,8 +140,6 @@ function sortList(flag){
 		}
 	}
 
-	//I·½¤Î¥ê¥¹¥È¤Î×îáá¤Ëµ½ß_¤·¤¿ˆöºÏ¤Ï
-	//ÓH¥ê¥¹¥È¤ò¸üĞÂ¤¹¤ë
 	if (head1==lstMember[cmp1].length && head2==lstMember[cmp2].length) {
 		for (i=0; i<lstMember[cmp1].length+lstMember[cmp2].length; i++) {
 			lstMember[parent[cmp1]][i] = rec[i];
@@ -180,7 +151,6 @@ function sortList(flag){
 		head1 = 0;
 		head2 = 0;
 
-		//ĞÂ¤·¤¤±Èİ^¤òĞĞ¤¦Ç°¤Ërec¤ò³õÆÚ»¯
 		if (head1==0 && head2==0) {
 			for (i=0; i<namMember.length; i++) {
 				rec[i] = 0;
@@ -201,7 +171,6 @@ function sortList(flag){
 	}
 }
 
-//½Y¹û¤Î±íÊ¾+++++++++++++++++++++++++++++++++++++++++++++++
 function showResult() {
 	var ranking = 1;
 	var sameRank = 1;
@@ -227,7 +196,6 @@ function showResult() {
 	document.getElementById("resultField").innerHTML = str;
 }
 
-//±Èİ^¤¹¤ë£²¤ÄÒªËØ¤Î±íÊ¾+++++++++++++++++++++++++++++++++++
 function showImage() {
 	var str0 = "Battle No."+numQuestion+"<br>"+Math.floor(finishSize*100/totalSize)+"% sorted.";
 	var str1 = ""+toNameFace(lstMember[cmp1][head1]);
@@ -240,17 +208,14 @@ function showImage() {
 	numQuestion++;
 }
 
-//Êı‚¤òÃûÇ°£¨î†ÎÄ×Ö£©¤Ë‰ä“Q+++++++++++++++++++++++++++++++
 function toNameFace(n){
 	var str = namMember[n];
 
-	//î†ÎÄ×Ö¤ò×·¼Ó¤¹¤ëˆöºÏ¤ÏÒÔÏÂ¤Î¥³¥á¥ó¥È¥¢¥¦¥È¤òÍâ¤¹
-	//namMember¤Î¥¤¥ó¥Ç¥Ã¥¯¥¹¤ÈÃ¬¶Ü¤·¤Ê¤¤¤è¤¦¤Ë×¢Òâ
 	/*
 	str += "<br>©¤©¤©¤©¤<br>";
 	switch(n) {
-		//case -1 ¤Ï¥µ¥ó¥×¥ë¤Ê¤Î¤ÇÏ÷³ı¤¹¤ë¤³¤È
-		case -1: str+="£¨ ¡ä?£à£©";break;
+		//case -1 ¤Ï¥µ¥ó¥×¥EÊ¤Î¤ÇÏ÷³ı¤¹¤E³¤È
+		case -1: str+=":D";break;
 		default: str+=""+n;
 	}
 	*/
@@ -260,11 +225,6 @@ function toNameFace(n){
 </script>
 <style type="text/css">
 <!--
-/**********************************************************
-
- ±í¤Î¥¹¥¿¥¤¥ë¤ò‰ä¸ü¤¹¤ëˆöºÏ¤Ï¤³¤³¤ò¾¼¯¤·¤Æ¤¯¤À¤µ¤¤¡£
-
-**********************************************************/
 #mainTable{
 	font-size: 16px;
 	text-align: center;
