@@ -66,12 +66,22 @@ var totalSize;
 var finishSize;
 var finishFlag;
 
+function randomShuffle(){
+    var len = namMember.length;
+    for(var i = 0;i < len ; i++){
+        var j = parseInt(Math.random() * (len - i));
+        var temp = namMember[j];
+        namMember[j] = namMember[len - i - 1];
+        namMember[len - i - 1] = temp;
+    }
+}
+
 function initList(){
         var n = 0;
         var mid;
         var i;
 
-        lstMember[n] = new Array();
+        randomShuffle();
         for (i=0; i<namMember.length; i++) {
                 lstMember[n][i] = i;
         }
